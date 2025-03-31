@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Header from './components/Header/Header';
+import LoginOrCreateAccount from './components/LoginOrCreateAccount/LoginOrCreateAccount';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -9,7 +10,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <Header />
+    <LoginOrCreateAccount />
   </React.StrictMode>
 );
 
