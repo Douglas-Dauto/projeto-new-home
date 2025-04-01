@@ -7,16 +7,18 @@ interface Props {
 
 function LoginOrCreateAccount(props: Props): React.JSX.Element {
     return (
-        <section>
-            <h2>Entre com seu email e senha</h2>
+        <section className="login-or-create-account">
+            <div>
+                <h2>Entre com seu email<br /> e senha</h2>
 
-            <form>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Senha" />
-                <input type="submit" placeholder="Entrar" />
-            </form>
+                <form>
+                    <input type="email" className="email" placeholder="Email" />
+                    <input type="password" className="password" placeholder="Senha" />
+                    <button className="button">Entrar</button>
+                </form>
+            </div>
 
-            <p>Não possui uma conta? <span>Criar</span></p>
+            <p className="not-account">Não possui uma conta? <span>Criar</span></p>
         </section>
   );
 }

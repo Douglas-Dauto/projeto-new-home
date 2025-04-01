@@ -1,0 +1,16 @@
+section.divisor {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 50px 0;
+    padding: 0 50px;
+}
+
+section.divisor > div {
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%vw);
+    border: 1px solid var(--White-500);
+    margin: 0 100px;
+}

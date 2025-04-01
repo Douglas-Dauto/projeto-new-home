@@ -11,6 +11,7 @@ header {
     padding: 32px 218px;
     align-items: center;
     gap: 20px;
+    justify-content: space-between;
 }
 
 header .App-logo {
@@ -22,4 +23,33 @@ header .App-logo {
 header .name {
     font-size: 24px;
     font-weight: 700;
+}
+
+header div:nth-child(1), header div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+header div:nth-child(1) {
+    gap: 20px;
+}
+
+header div:nth-child(2) {
+    gap: 40px;
+}
+
+header div:nth-child(2), header div:nth-child(2) button {
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--White-100);
+}
+
+header div:nth-child(2) button {
+    width: 163px;
+    height: 55px;
+    border-radius: 12px;
+    background: var(--Primary, #FE8100);
+    cursor: pointer;
 }

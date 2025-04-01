@@ -1,0 +1,20 @@
+section.bem-vindo {
+    width: 100%;
+    max-width: 734px;
+    height: 893px;
+    display: inline-flex;
+    font-weight: 400;
+    font-size: 20px;
+    background-image: url(../../assets/img/bem-vindo-foto.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 26px;
+}
+
+section.bem-vindo h2 {
+    font-weight: 500;
+    font-size: 40px;
+    color: var(--White-400);
+    padding: 80px 30px;
+}

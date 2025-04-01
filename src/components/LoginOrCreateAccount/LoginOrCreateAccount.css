@@ -1,14 +1,76 @@
-section {
+section.login-or-create-account {
     border-radius: 29px;
     width: 100%;
     max-width: 621px;
     height: 893px;
-    background-color: var(--White-200);
+    background: var(--White-200, #FBFBFB);
     box-shadow: 0px 4px 7px 0px #00000040;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    font-weight: 400;
+    font-size: 20px;
 }
 
-section h2 {
+section.login-or-create-account > div {
+    border-bottom: 1px solid var(--White-500, #D8D8D8)
+}
+
+section.login-or-create-account h2 {
     font-weight: 700;
     font-size: 32px;
     color: var(--Black-400);
+    margin-bottom: 100px;
+}
+
+section.login-or-create-account form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+section.login-or-create-account .email, section.login-or-create-account .password, section.login-or-create-account .button {
+    width: 468px;
+    height: 70px;
+    padding: 15px 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+section.login-or-create-account .email, section.login-or-create-account .password {
+    background: var(--White-300, #F2F2F4);
+    border-radius: 66px;
+}
+
+section.login-or-create-account input[type=password]:nth-last-child(-n+2) {
+    margin-bottom: 15px;
+}
+
+section.login-or-create-account .button {
+    background: var(--Primary, #FE8100);
+    border-radius: 55px;
+    color: var(--White-100);
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+
+section.login-or-create-account .email::placeholder, section.login-or-create-account .password::placeholder {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+section.login-or-create-account .not-account {
+    color: var(--Black-1000);
+}
+
+section.login-or-create-account .not-account span {
+    color: var(--Primary);
+    font-weight: bold;
+    cursor: pointer;
 }
