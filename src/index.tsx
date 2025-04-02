@@ -5,6 +5,8 @@ import Header from './components/Header/Header';
 import LoginOrCreateAccount from './components/LoginOrCreateAccount/LoginOrCreateAccount';
 import BemVindo from './components/BemVindo/BemVindo';
 import Divisor from './components/Divisor/Divisor';
+import Carousel from './components/Carousel/Carousel';
+import Services from './components/Services/Services';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -13,6 +15,8 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
     <Header isLogged={true} />
+    <Carousel />
+    <Services />
     {/*<Divisor>*/}
     {/*    <LoginOrCreateAccount />*/}
     {/*    <BemVindo />*/}

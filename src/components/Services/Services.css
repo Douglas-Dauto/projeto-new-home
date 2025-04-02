@@ -1,0 +1,47 @@
+section.services {
+    width: 100%;
+    max-width: 1366px;
+    color: var(--Black-400);
+    margin: 0 auto;
+    padding-top: 90px;
+}
+
+section.services > h2 {
+    font-weight: 400;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+section.services > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section.services .service-item {
+    width: 246px;
+    height: 319px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+section.services .service-item img {
+    width: 246px;
+    height: 246px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+section.services .service-item h3 {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+section.services .service-item p {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--Gray-500);
+}
