@@ -8,7 +8,7 @@ interface Props {
 
 function Carousel(props: Props): React.JSX.Element {
     return (
-        <section className="carousel">
+        <section className="carousel" id="carousel">
             <div>
                 <h2>Encontre as melhores casas, <br />pontos comerciais e hoteis</h2>
                 <img src={imgCarousel} alt="casa" />

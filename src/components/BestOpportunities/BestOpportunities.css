@@ -1,0 +1,56 @@
+section.best-opportunities {
+    width: 100%;
+    max-width: 1366px;
+    color: var(--Black-400);
+    margin: 25px auto 0;
+}
+
+section.best-opportunities > h2 {
+    font-weight: 400;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+section.best-opportunities > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+section.best-opportunities .best-opportunities-item img {
+    width: 292px;
+    height: 197px;
+    border-radius: 12px;
+}
+
+section.best-opportunities .best-opportunities-item h3 {
+    font-weight: 600;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+section.best-opportunities .best-opportunities-item > div:first-child > p {
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--Gray-500);
+}
+
+section.best-opportunities .best-opportunities-item > div:first-child > p sup {
+    font-size: 14px;
+}
+
+section.best-opportunities .best-opportunities-item > div:nth-child(2) {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+section.best-opportunities .best-opportunities-item > div:nth-child(2) > p {
+    border-radius: 8px;
+    background: var(--Primary, #FE8100);
+    color: var(--White-400);
+    font-weight: 400;
+    font-size: 15px;
+    padding: 5px 10px;
+}

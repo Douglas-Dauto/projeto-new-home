@@ -7,6 +7,8 @@ import BemVindo from './components/BemVindo/BemVindo';
 import Divisor from './components/Divisor/Divisor';
 import Carousel from './components/Carousel/Carousel';
 import Services from './components/Services/Services';
+import BestOpportunities from './components/BestOpportunities/BestOpportunities';
+import Footer from './components/Footer/Footer';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -17,6 +19,8 @@ root.render(
     <Header isLogged={true} />
     <Carousel />
     <Services />
+    <BestOpportunities />
+    <Footer />
     {/*<Divisor>*/}
     {/*    <LoginOrCreateAccount />*/}
     {/*    <BemVindo />*/}
