@@ -1,6 +1,7 @@
-import React from 'react';
-import './BestOpportunities.css';
+import React, { useState } from 'react';
 import melhoresCasas from '../../assets/img/melhores-casas.png';
+import './BestOpportunities.css';
+import ModalProduct from '../ModalProduct/ModalProduct';
 
 interface Props {
 
@@ -8,6 +9,7 @@ interface Props {
 
 function BestOpportunities(props: Props): React.JSX.Element {
     const qtdItems: Array<number> = [];
+    const [openModal, setOpenModal] = useState(false);
 
     for (let i: number = 0; i < 8; i++) {
         qtdItems.push(i);
@@ -20,7 +22,7 @@ function BestOpportunities(props: Props): React.JSX.Element {
             <div>
                 {qtdItems.map(() => {
                     return (
-                        <div className="best-opportunities-item">
+                        <div className="best-opportunities-item" onClick={() => setOpenModal(!openModal)}>
                             <div>
                                 <img src={melhoresCasas} alt="casa" />
                                 <h3>R$ 2.000.000</h3>
@@ -35,6 +37,8 @@ function BestOpportunities(props: Props): React.JSX.Element {
                     )
                 })}
             </div>
+
+            {openModal ? <ModalProduct openModal={openModal} setOpenModal={setOpenModal} /> : openModal}
         </section>
   );
 }

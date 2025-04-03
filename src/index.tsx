@@ -8,23 +8,25 @@ import Divisor from './components/Divisor/Divisor';
 import Carousel from './components/Carousel/Carousel';
 import Services from './components/Services/Services';
 import BestOpportunities from './components/BestOpportunities/BestOpportunities';
+import ModalProduct from './components/ModalProduct/ModalProduct';
 import Footer from './components/Footer/Footer';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(
+export const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
     <React.StrictMode>
-    <Header isLogged={true} />
-    <Carousel />
-    <Services />
-    <BestOpportunities />
-    <Footer />
-    {/*<Divisor>*/}
-    {/*    <LoginOrCreateAccount />*/}
-    {/*    <BemVindo />*/}
-    {/*</Divisor>*/}
+    <Header />
+    {/*<Carousel />*/}
+    {/*<Services />*/}
+    {/*<BestOpportunities />*/}
+    {/*<ModalProduct />*/}
+    {/*<Footer />*/}
+    <Divisor>
+        <LoginOrCreateAccount />
+        <BemVindo />
+    </Divisor>
   </React.StrictMode>
 );
 
