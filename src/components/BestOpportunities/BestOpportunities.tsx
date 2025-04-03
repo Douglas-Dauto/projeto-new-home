@@ -1,44 +1,44 @@
 import React, { useState } from 'react';
-import melhoresCasas from '../../assets/img/melhores-casas.png';
 import './BestOpportunities.css';
 import ModalProduct from '../ModalProduct/ModalProduct';
+import bestOpportunitiesJson from '../../data/data.json';
 
 interface Props {
-
+    
 }
 
 function BestOpportunities(props: Props): React.JSX.Element {
-    const qtdItems: Array<number> = [];
     const [openModal, setOpenModal] = useState(false);
-
-    for (let i: number = 0; i < 8; i++) {
-        qtdItems.push(i);
-    }
+    const [valueBestOpportunitie, setValueBestOpportunitie] = useState(bestOpportunitiesJson[0]);
 
     return (
         <section className="best-opportunities">
             <h2>Melhores Oportunidades</h2>
 
             <div>
-                {qtdItems.map(() => {
+                {bestOpportunitiesJson.map((value, index) => {
                     return (
-                        <div className="best-opportunities-item" onClick={() => setOpenModal(!openModal)}>
+                        <div className="best-opportunities-item" onClick={() => {
+                            setValueBestOpportunitie(value);
+                            setOpenModal(!openModal);
+                        }
+                        } key={index}>
                             <div>
-                                <img src={melhoresCasas} alt="casa" />
-                                <h3>R$ 2.000.000</h3>
-                                <p>132m<sup>2</sup></p>
+                                <img src={require(`../../assets/img/${value.image}`)} alt="casa" />
+                                <h3>{value.price}</h3>
+                                <p>{value.size}m<sup>2</sup></p>
                             </div>
 
                             <div>
-                                <p>5 quartos</p>
-                                <p>4 banheiros</p>
+                                <p>{value.bedrooms} quartos</p>
+                                <p>{value.bathrooms} banheiros</p>
                             </div>
                         </div>
                     )
                 })}
             </div>
 
-            {openModal ? <ModalProduct openModal={openModal} setOpenModal={setOpenModal} /> : openModal}
+            {openModal ? <ModalProduct openModal={openModal} setOpenModal={setOpenModal} valueBestOpportunitie={valueBestOpportunitie} /> : openModal}
         </section>
   );
 }

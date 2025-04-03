@@ -1,11 +1,11 @@
 import React from 'react';
-import casaModal from '../../assets/img/casa-modal.png';
 import close from '../../assets/img/icons/vector-close.png';
 import './ModalProduct.css';
 
 interface Props {
     openModal: boolean;
     setOpenModal: Function;
+    valueBestOpportunitie: { image: string, price: string, size: number, bedrooms: number, bathrooms: number };
 }
 
 function ModalProduct(props: Props): React.JSX.Element {
@@ -14,16 +14,16 @@ function ModalProduct(props: Props): React.JSX.Element {
         <section className="modal-product">
             <div>
                 <img src={close} alt="fechar modal" onClick={() => props.setOpenModal(!props.openModal)} />
-                <img src={casaModal} alt="casa selecionada" />
+                <img src={require(`../../assets/img/${props.valueBestOpportunitie.image}`)} alt="casa selecionada" />
 
                 <div className="modal-product-info">
-                    <p>R$ 2.200.000</p>
+                    <p>{props.valueBestOpportunitie.price}</p>
 
                     <div>
                         <div>
-                            <p>5 quartos</p>
-                            <p>5 banheiros</p>
-                            <p>132m<sup>2</sup></p>
+                            <p>{props.valueBestOpportunitie.bedrooms} quartos</p>
+                            <p>{props.valueBestOpportunitie.bathrooms} banheiros</p>
+                            <p>{props.valueBestOpportunitie.size}m<sup>2</sup></p>
                         </div>
 
                         <button>Comprar</button>

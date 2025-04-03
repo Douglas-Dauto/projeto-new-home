@@ -17,6 +17,10 @@ section.best-opportunities > div {
     gap: 50px;
 }
 
+section.best-opportunities .best-opportunities-item {
+    cursor: pointer;
+}
+
 section.best-opportunities .best-opportunities-item img {
     width: 292px;
     height: 197px;
