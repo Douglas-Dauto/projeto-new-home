@@ -15,6 +15,11 @@ import reportWebVitals from './reportWebVitals';
 export const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+if (localStorage.getItem("firstVisit")) {
+    localStorage.setItem('usersJson', JSON.stringify(require('./data/users.json')));
+}
+
 root.render(
     <React.StrictMode>
     <Header />
