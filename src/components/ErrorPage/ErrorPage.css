@@ -1,0 +1,56 @@
+section.error-services-alert {
+    width: 100%;
+    max-width: 734px;
+    height: calc(100vh - 209px);
+    display: inline-flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 20px;
+    border-radius: 26px;
+    justify-content: center;
+    align-items: center;
+}
+
+section.error-services-alert p:first-child {
+    font-weight: 500;
+    font-size: 40px;
+    color: var(--Primary);
+}
+
+section.error-services-alert h1 {
+    font-weight: 900;
+    font-size: 64px;
+    color: var(--Black-500);
+}
+
+section.error-services-alert .work-error {
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--Gray-500, #848383);
+    margin-bottom: 50px;
+}
+
+section.error-services-alert button {
+    width: 468px;
+    height: 70px;
+    border-radius: 55px;
+    background: var(--Primary, #FE8100);
+    color: var(--White-100, #FFFFFF);
+    font-weight: 500;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+section.error-services-robot {
+    width: 100%;
+    max-width: 734px;
+    height: calc(100vh - 209px);
+    display: inline-flex;
+    font-weight: 400;
+    font-size: 20px;
+    background-image: url(../../assets/img/error-services-robot.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 26px;
+}

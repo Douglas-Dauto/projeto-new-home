@@ -74,3 +74,15 @@ section.login-or-create-account .not-account span {
     font-weight: bold;
     cursor: pointer;
 }
+
+#alert {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--Red-200);
+    width: 100%;
+    padding-left: 10px;
+}
+
+#alert p.create-sucess, #alert p.ok-data {
+    color: var(--Green-200);
+}

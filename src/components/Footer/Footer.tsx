@@ -11,6 +11,7 @@ interface Props {
 }
 
 function Footer(props: Props): React.JSX.Element {
+    
     return (
         <footer>
             <div>
@@ -20,21 +21,20 @@ function Footer(props: Props): React.JSX.Element {
                     <p>(99) 99999-9999</p>
 
                     <div>
-                        <img src={vectorFacebook} alt="facebook" />
-                        <img src={vectorInstagram} alt="instagram" />
-                        <img src={vectorYoutube} alt="youtube" />
-                        <img src={vectorTwitter} alt="twitter" />
+                        <a href="https://www.facebook.com/compass.uol/about" target="_blank"><img src={vectorFacebook} alt="facebook" /></a>
+                        <a href="https://www.instagram.com/compass.uol/" target="_blank"><img src={vectorInstagram} alt="instagram" /></a>
+                        <a href="https://www.youtube.com/@Compassuol" target="_blank"><img src={vectorYoutube} alt="youtube" /></a>
+                        <a href="https://x.com/compassuol/" target="_blank"><img src={vectorTwitter} alt="twitter" /></a>
                     </div>
                 </div>
 
                 <p>Feito com &lt;3 por Fulano de tal - Todos os Direitos Reservados</p>
 
                 <div>
-                    <a href="carousel">
-                        <div>
-                            <img src={arrow} alt="seta para voltar ao topo" />
-                        </div>
-                    </a>
+                    {/* eslint-disable no-restricted-globals */}
+                    <div onClick={() => scrollTo(0, 0)}>
+                        <img src={arrow} alt="seta para voltar ao topo" />
+                    </div>
                 </div>
             </div>
         </footer>

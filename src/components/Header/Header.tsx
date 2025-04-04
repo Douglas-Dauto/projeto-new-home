@@ -12,6 +12,7 @@ import Footer from '../Footer/Footer';
 
 interface Props {
     isLogged?: boolean;
+    controlView?: boolean;
 }
 
 function Header(props: Props): React.JSX.Element {
@@ -31,6 +32,9 @@ function Header(props: Props): React.JSX.Element {
                 <Footer />
             </>
         );
+
+        /* eslint-disable no-restricted-globals */
+        scrollTo(0, 0);
     }
 
     function logout() {
@@ -45,13 +49,16 @@ function Header(props: Props): React.JSX.Element {
                 </Divisor>
             </>
         );
+
+        /* eslint-disable no-restricted-globals */
+        scrollTo(0, 0);
     }
 
-  return (
-    <header className="App-header">
+    return (
+        <header className={props.controlView ? "App-header-none" : "App-header"}>
         <div>
               <img src={logo} className="App-logo" alt="logo" />
-              <p className="name">Agência batatinha</p>
+              <p className="name">Ag&ecirc;ncia batatinha</p>
         </div>
 
         {props.isLogged ?

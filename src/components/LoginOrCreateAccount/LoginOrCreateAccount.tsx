@@ -57,11 +57,11 @@ function LoginOrCreateAccount(props: Props): React.JSX.Element {
         alertContainer.innerHTML = '';
 
         if (emailInput.value === '' || passwordInput.value === '' || isCreateAccount && passwordInputConfirm.value === '') {
-            problems.push('<p>Todos os campos são obrigatórios</p><br>');
+            problems.push('<p>Todos os campos s&atilde;o obrigat&oacute;rios</p><br>');
         }
 
         if (passwordInput.value.length < 8 || isCreateAccount && passwordInputConfirm.value.length < 8) {
-            problems.push('<p>Sua senha deve ter no mínimo 8 caracteres</p><br>');
+            problems.push('<p>Sua senha deve ter no m&iacute;nimo 8 caracteres</p><br>');
         }
 
         if (isCreateAccount && passwordInput.value !== passwordInputConfirm.value) {
@@ -85,7 +85,7 @@ function LoginOrCreateAccount(props: Props): React.JSX.Element {
         const newArray = array.filter((value) => emailInput.value === value.email && passwordInput.value === value.password);
 
         if (newArray.length > 0) {
-            alertContainer.innerHTML = '<p>Dados ok</p>';
+            alertContainer.innerHTML = '<p class="ok-data">Dados ok</p>';
             localStorage.setItem('user', JSON.stringify(newArray));
 
             setTimeout(() => {
@@ -100,7 +100,7 @@ function LoginOrCreateAccount(props: Props): React.JSX.Element {
                 );
             }, 1500);
         } else {
-            alertContainer.innerHTML = '<p>Email ou senha inválidos</p>';
+            alertContainer.innerHTML = '<p>Email ou senha inv&aacute;lidos</p>';
         }
     }
 
@@ -110,7 +110,7 @@ function LoginOrCreateAccount(props: Props): React.JSX.Element {
         const newArray = array.filter((value) => emailInput.value === value.email);
 
         if (newArray.length > 0) {
-            alertContainer.innerHTML = '<p>Já existe uma conta com esse email</p>';
+            alertContainer.innerHTML = '<p>J&aacute; existe uma conta com esse email</p>';
             return;
         }
 
@@ -118,7 +118,7 @@ function LoginOrCreateAccount(props: Props): React.JSX.Element {
         const arrayUsers = [...JSON.parse(localStorage.getItem('usersJson')!), newUser];
 
         localStorage.setItem('usersJson', JSON.stringify(arrayUsers));
-        alertContainer.innerHTML = '<p>Conta criada com sucesso</p>';
+        alertContainer.innerHTML = '<p class="create-sucess">Conta criada com sucesso</p>';
 
         setTimeout(() => {
             setIsCreateAccount(!isCreateAccount);
@@ -152,7 +152,7 @@ function LoginOrCreateAccount(props: Props): React.JSX.Element {
                 </form>
             </div>
 
-            {isCreateAccount ? <p className="not-account">Já possui uma conta? <span onClick={() => setIsCreateAccount(false)}>Conecte-se</span></p> : <p className="not-account">Não possui uma conta? <span onClick={() => setIsCreateAccount(true)}>Criar</span></p>}
+            {isCreateAccount ? <p className="not-account">J&aacute; possui uma conta? <span onClick={() => setIsCreateAccount(false)}>Conecte-se</span></p> : <p className="not-account">N&atilde;o possui uma conta? <span onClick={() => setIsCreateAccount(true)}>Criar</span></p>}
         </section>
   );
 }

@@ -26,4 +26,5 @@ section.carousel h2 {
     left: 130px;
     font-weight: 600;
     font-size: 50px;
+    color: var(--Black-300, #3C3C3C);
 }
