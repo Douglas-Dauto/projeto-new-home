@@ -54,3 +54,33 @@ section.error-services-robot {
     background-repeat: no-repeat;
     border-radius: 26px;
 }
+
+@media (max-width: 1350px) {
+    section.error-services-robot {
+        width: 292px;
+        height: 254px;
+    }
+
+    section.error-services-alert {
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    section.error-services-alert > div {
+        width: 100%;
+    }
+
+    section.error-services-alert p:first-child {
+        font-size: 20px;
+        margin-top: 40px;
+    }
+
+    section.error-services-alert h1 {
+        font-size: 32px;
+    }
+
+    section.error-services-alert button {
+        width: 100%;
+        margin-top: 55px;
+    }
+}

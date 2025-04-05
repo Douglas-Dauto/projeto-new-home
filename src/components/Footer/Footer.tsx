@@ -32,7 +32,14 @@ function Footer(props: Props): React.JSX.Element {
 
                 <div>
                     {/* eslint-disable no-restricted-globals */}
-                    <div onClick={() => scrollTo(0, 0)}>
+                    <div onClick={() => {
+                        document.getElementsByTagName("html")[0]!.setAttribute('style', 'scroll-behavior: smooth;');
+
+                        setTimeout(() => {
+                            scrollTo(0, 0);
+                            document.getElementsByTagName("html")[0]!.removeAttribute('style');
+                        }, 100);
+                    }}>
                         <img src={arrow} alt="seta para voltar ao topo" />
                     </div>
                 </div>

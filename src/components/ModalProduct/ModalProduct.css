@@ -101,3 +101,46 @@ section.modal-product .modal-product-info > div button {
     font-size: 24px;
     padding: 0;
 }
+
+@media (max-width: 1103px) {
+    section.modal-product > div:first-child {
+        width: 100%;
+        height: max-content;
+    }
+}
+
+@media (max-width: 975px) {
+    section.modal-product .modal-product-info > div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    section.modal-product .modal-product-info > div > div {
+        flex-wrap: wrap;
+    }
+
+    section.modal-product .modal-product-info > p {
+        font-size: 20px;
+    }
+
+    section.modal-product .modal-product-info > div > div p:first-child, section.modal-product .modal-product-info > div > div p:nth-child(2) {
+        font-size: 18px;
+        width: max-content;
+        height: max-content;
+        padding: 10px 20px;
+    }
+
+    section.modal-product .modal-product-info > div > div p:nth-child(3) {
+        font-size: 18px;
+    }
+
+    section.modal-product .modal-product-info > div > div p:nth-child(3) sup {
+        font-size: 15px;
+    }
+
+    section.modal-product > div:first-child img:nth-child(2) {
+        height: calc(100vh - 420px);
+    }
+}

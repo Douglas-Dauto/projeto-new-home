@@ -58,3 +58,15 @@ header div:nth-child(2) button {
     background: var(--Primary, #FE8100);
     cursor: pointer;
 }
+
+@media (max-width: 1240px) {
+    header {
+        padding: 32px 20px;
+    }
+}
+
+@media (max-width: 710px) {
+    header .name, header div:nth-child(2) > p {
+        display: none;
+    }
+}

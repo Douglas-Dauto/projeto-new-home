@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -16,12 +17,14 @@ if (localStorage.getItem("firstVisit")) {
 }
 
 if (localStorage.getItem("user")) {
+    scrollTo(0, 0);
     root.render(
         <React.StrictMode>
             <Header isLogged={true} controlView={true} />
         </React.StrictMode>
     );
 } else {
+    scrollTo(0, 0);
     root.render(
         <React.StrictMode>
             <Header />

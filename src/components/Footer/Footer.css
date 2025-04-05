@@ -60,3 +60,20 @@ footer > div > div:last-child div img {
     border-radius: 50%;
     transform: translateY(3px);
 }
+
+@media (max-width: 1660px) {
+    footer {
+        padding: 30px 40px;
+    }
+
+    footer > div {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 15px;
+    }
+
+    footer > div > div:first-child, footer > div > div:last-child {
+        width: 100%;
+    }
+}

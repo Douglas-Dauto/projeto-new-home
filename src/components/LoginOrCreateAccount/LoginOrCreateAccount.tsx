@@ -8,6 +8,7 @@ import BestOpportunities from '../BestOpportunities/BestOpportunities';
 import Footer from '../Footer/Footer';
 import Divisor from '../Divisor/Divisor';
 import BemVindo from '../BemVindo/BemVindo';
+import logo from '../../assets/img/logo-uol.png';
 
 interface Props {
 
@@ -58,6 +59,10 @@ function LoginOrCreateAccount(props: Props): React.JSX.Element {
 
         if (emailInput.value === '' || passwordInput.value === '' || isCreateAccount && passwordInputConfirm.value === '') {
             problems.push('<p>Todos os campos s&atilde;o obrigat&oacute;rios</p><br>');
+        }
+
+        if (isCreateAccount && !emailInput.value.includes('@')) {
+            problems.push('<p>Email inv&aacute;lido</p><br>');
         }
 
         if (passwordInput.value.length < 8 || isCreateAccount && passwordInputConfirm.value.length < 8) {
@@ -138,6 +143,7 @@ function LoginOrCreateAccount(props: Props): React.JSX.Element {
     return (
         <section className="login-or-create-account">
             <div>
+                <img src={logo} className="App-logo-short-view" alt="logo" />
                 {isCreateAccount ? <h2>Cadastre-se com<br /> E-mail e Senha</h2> : <h2>Entre com seu email<br /> e senha</h2>}
 
                 <form>

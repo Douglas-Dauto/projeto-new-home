@@ -5,8 +5,7 @@
     border: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 0;
-    scroll-behavior: smooth;
+    outline: 0
 }
 
 :root {
@@ -37,4 +36,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media (max-width: 750px) {
+    body {
+        padding-top: 0px;
+    }
 }

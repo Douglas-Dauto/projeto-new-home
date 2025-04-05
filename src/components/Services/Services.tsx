@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import React from 'react';
 import { root } from '../../index';
 import './Services.css';
@@ -13,6 +14,7 @@ interface Props {
 
 function Services(props: Props): React.JSX.Element {
     function showErrorPage() {
+        scrollTo(0, 0);
         root.render(
             <>
                 <Header />

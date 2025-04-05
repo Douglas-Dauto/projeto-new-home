@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import React, { useEffect } from 'react';
 import logo from '../../assets/img/logo-uol.png';
 import './Header.css';
@@ -20,9 +21,18 @@ function Header(props: Props): React.JSX.Element {
         if (localStorage.getItem('user')) {
             login();
         }
+
+        setInterval(() => {
+            if (window.innerWidth < 750 && !document.getElementById("carousel")) {
+                document.getElementsByTagName('header')[0].setAttribute('style', 'display: none;');
+            } else {
+                document.getElementsByTagName('header')[0].setAttribute('style', '');
+            }
+        }, 200);
     }, []);
 
     function login() {
+        scrollTo(0, 0);
         root.render(
             <>
                 <Header isLogged={true} />
@@ -32,13 +42,11 @@ function Header(props: Props): React.JSX.Element {
                 <Footer />
             </>
         );
-
-        /* eslint-disable no-restricted-globals */
-        scrollTo(0, 0);
     }
 
     function logout() {
         localStorage.removeItem('user');
+        scrollTo(0, 0);
 
         root.render(
             <>

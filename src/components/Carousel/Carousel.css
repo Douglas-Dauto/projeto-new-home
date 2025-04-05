@@ -28,3 +28,20 @@ section.carousel h2 {
     font-size: 50px;
     color: var(--Black-300, #3C3C3C);
 }
+
+@media (max-width: 988px) {
+    section.carousel h2 {
+        left: 20px;
+    }
+}
+
+@media (max-width: 755px) {
+    section.carousel h2 {
+        font-size: 30px;
+    }
+
+    section.carousel {
+        padding-top: 109px;
+        height: 500px;
+    }
+}

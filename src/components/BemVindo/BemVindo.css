@@ -18,3 +18,9 @@ section.bem-vindo h2 {
     color: var(--White-400);
     padding: 80px 30px;
 }
+
+@media (max-width: 1350px) {
+    section.bem-vindo {
+        display: none;
+    }
+}

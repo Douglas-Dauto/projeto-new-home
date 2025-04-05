@@ -45,3 +45,21 @@ section.services .service-item p {
     font-size: 16px;
     color: var(--Gray-500);
 }
+
+@media (max-width: 1430px) {
+    section.services {
+        padding: 90px 20px 0 20px;
+    }
+}
+
+@media (max-width: 875px) {
+    section.services > div {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    section.services > h2 {
+        text-align: center;
+    }
+}

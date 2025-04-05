@@ -14,3 +14,15 @@ section.divisor > div {
     border: 1px solid var(--White-500);
     margin: 0 100px;
 }
+
+@media (max-width: 1350px) {
+    section.divisor {
+        padding: 0;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    section.divisor > div {
+        display: none;
+    }
+}

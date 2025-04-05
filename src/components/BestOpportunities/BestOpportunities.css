@@ -79,6 +79,12 @@ section.best-opportunities .best-opportunities-item > div:nth-child(2) > p {
     }
 }
 
+@media (max-width: 875px) {
+    section.best-opportunities > h2 {
+        text-align: center;
+    }
+}
+
 @media (max-width: 732px) {
     section.best-opportunities > div {
         grid-template-columns: 1fr;
