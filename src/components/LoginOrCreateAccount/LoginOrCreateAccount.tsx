@@ -154,7 +154,7 @@ function LoginOrCreateAccount(props: Props): React.JSX.Element {
                     <button className="button" id="button" onClick={(e) => {
                         e.preventDefault();
                         carryOutLogin();
-                    }}>{isCreateAccount ? 'Registro' :'Entrar'}</button>
+                    }}>{isCreateAccount ? 'Registro' : 'Entrar'}</button>
                 </form>
             </div>
 

@@ -2,7 +2,7 @@ section.login-or-create-account {
     border-radius: 29px;
     width: 100%;
     max-width: 621px;
-    height: 893px;
+    min-height: 893px;
     background: var(--White-200, #FBFBFB);
     box-shadow: 0px 4px 7px 0px #00000040;
     display: inline-flex;
@@ -71,6 +71,7 @@ section.login-or-create-account .email::placeholder, section.login-or-create-acc
 
 section.login-or-create-account .not-account {
     color: var(--Black-1000);
+    padding: 10px 0px 5px;
 }
 
 section.login-or-create-account .not-account span {
